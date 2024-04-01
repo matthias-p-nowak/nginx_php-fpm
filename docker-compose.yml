@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  box1:
+    build:
+      context: build
+    develop:
+      watch:
+        - path: ./build/
+          action: rebuild 
+        - path: docker-compose.yml
+          action: rebuild
+    networks:
+      backbone:
+        ipv4_address: 192.168.1.4
+    volumes:
+      - ./output:/output
+      - ./live:/live
+    command: sleep 86400
+    # command: /input/run.sh 
+
+networks:
+  backbone:
+    name: backbone
+    external: true
