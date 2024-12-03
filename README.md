@@ -36,7 +36,7 @@ I am using both "PHP Debug" by FelixFBecker and "phpfmt" by kokororin. The first
 "Unconfirmed breakpoints" is a sign that the server could not establish breakpoints in the right location. This is an indication that the local path could not be mapped to a remote counterpart. If so, add the correct mapping. Here, I have an nfs-mount of my Xen-machine and debug a script on that server. 
 ~~~Javascript
 "pathMappings": {
-    "/live/public": "/net/xen/lvms/nas/docker/fsco-test/live/public"
+    "/live/public": "/net/xen/lvms/nas/docker/ftest/live/public"
     }
 ~~~
 
